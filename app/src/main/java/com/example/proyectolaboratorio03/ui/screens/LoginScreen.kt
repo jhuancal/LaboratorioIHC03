@@ -23,11 +23,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaInputField
 import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaPrimaryButton
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaLoginHeader
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGold
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreen
 import com.example.proyectolaboratorio03.ui.theme.White
@@ -106,5 +108,15 @@ fun LoginScreen(
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun LoginScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        LoginScreen(
+            onLoginSuccess = {}
+        )
     }
 }

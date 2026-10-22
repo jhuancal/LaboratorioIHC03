@@ -16,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.proyectolaboratorio03.model.MockData
@@ -25,6 +26,7 @@ import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaSpinner
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaProcessProgressCard
 import com.example.proyectolaboratorio03.ui.theme.Gray400
 import com.example.proyectolaboratorio03.ui.theme.Gray500
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreen
 import com.example.proyectolaboratorio03.ui.theme.White
 
@@ -99,5 +101,15 @@ fun LoadingScreen(
                 onClick = onCancelClick
             )
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun LoadingScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        LoadingScreen(
+            onCancelClick = {}
+        )
     }
 }

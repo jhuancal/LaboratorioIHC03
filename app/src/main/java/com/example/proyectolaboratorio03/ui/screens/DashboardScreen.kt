@@ -14,6 +14,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.proyectolaboratorio03.model.MockData
 import com.example.proyectolaboratorio03.model.Student
@@ -21,6 +22,7 @@ import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaSectionTitle
 import com.example.proyectolaboratorio03.ui.designsystem.molecules.UnsaStatCard
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaDashboardHeader
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaMethodCard
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGold
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreen
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreenSurface
@@ -105,5 +107,16 @@ fun DashboardScreen(
                 onClick = onMethod2Click
             )
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun DashboardScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        DashboardScreen(
+            onMethod1Click = {},
+            onMethod2Click = {}
+        )
     }
 }

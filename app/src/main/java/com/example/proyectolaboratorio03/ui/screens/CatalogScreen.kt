@@ -25,7 +25,9 @@ import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaSearchField
 import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaSectionTitle
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaCategoryCard
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaHeader
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreenSurface
+import androidx.compose.ui.tooling.preview.Preview
 
 /**
  * Pantalla 3: Catálogo de Talleres Extracurriculares
@@ -107,5 +109,16 @@ fun CatalogScreen(
                 }
             }
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun CatalogScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        CatalogScreen(
+            onBackClick = {},
+            onCategoryClick = {}
+        )
     }
 }

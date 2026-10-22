@@ -16,12 +16,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.proyectolaboratorio03.model.MockData
 import com.example.proyectolaboratorio03.model.WorkshopGroup
 import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaPrimaryButton
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaGroupCard
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaHeader
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreenSurface
 
 /**
@@ -85,5 +87,16 @@ fun GroupScreen(
                 }
             )
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun GroupScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        GroupScreen(
+            onBackClick = {},
+            onConfirmEnrollment = {}
+        )
     }
 }

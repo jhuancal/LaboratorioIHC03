@@ -15,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.proyectolaboratorio03.model.MockData
 import com.example.proyectolaboratorio03.model.TimeFilter
@@ -25,6 +26,7 @@ import com.example.proyectolaboratorio03.ui.designsystem.molecules.UnsaFilterSum
 import com.example.proyectolaboratorio03.ui.designsystem.molecules.UnsaToggleSettingRow
 import com.example.proyectolaboratorio03.ui.designsystem.molecules.UnsaTurnSelectorRow
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaHeader
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreenSurface
 
 /**
@@ -114,5 +116,16 @@ fun TimeFilterScreen(
                 onClick = { onApplyFilter(currentFilter) }
             )
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun TimeFilterScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        TimeFilterScreen(
+            onBackClick = {},
+            onApplyFilter = {}
+        )
     }
 }

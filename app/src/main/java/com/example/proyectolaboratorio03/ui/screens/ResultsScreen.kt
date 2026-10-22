@@ -10,12 +10,14 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.proyectolaboratorio03.model.MockData
 import com.example.proyectolaboratorio03.model.Workshop
 import com.example.proyectolaboratorio03.ui.designsystem.atoms.UnsaStatusBadge
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaHeader
 import com.example.proyectolaboratorio03.ui.designsystem.organisms.UnsaWorkshopCard
+import com.example.proyectolaboratorio03.ui.theme.ProyectoLaboratorio03Theme
 import com.example.proyectolaboratorio03.ui.theme.UnsaGreenSurface
 
 /**
@@ -68,5 +70,16 @@ fun ResultsScreen(
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 375, heightDp = 812)
+@Composable
+private fun ResultsScreenPreview() {
+    ProyectoLaboratorio03Theme {
+        ResultsScreen(
+            onBackClick = {},
+            onWorkshopSelected = {}
+        )
     }
 }
